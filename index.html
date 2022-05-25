@@ -11,11 +11,17 @@
         /*import {URL} from "./js/modulo-api.js";
         console.log(window.URL);
         window.URL2=URL*/
-        import {listNightmare, listNightmareS} from "./js/modulo-api.js";
-        
+        //--------------------------------------------------
+        //import {listNightmare, listNightmareS} from "./js/modulo-api.js";
+        import {apiList} from "./js/modulo-api.js";
+        import {CONTENT_TYPE} from "./js/config.js";
+
         console.log("Inizio esecuzione");
-        listNightmare();
-        listNightmareS();
+        //listNightmare();
+        //listNightmareS();
+        apiList("nightmare", "");
+        apiList("nightmare", CONTENT_TYPE.SERIES);
+        apiList("terminator", "");
         console.log("Fine esecuzione");
     </script>
     <!--<button onclick="console.log(window.URL2)">
