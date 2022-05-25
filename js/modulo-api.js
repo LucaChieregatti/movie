@@ -31,5 +31,5 @@ export const apiList = (s, type) => {
     .then((results) => {
         const items = results.Search;
         console.log(items);
-    })
+    });
 }
