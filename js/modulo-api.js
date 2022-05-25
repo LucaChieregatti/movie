@@ -23,7 +23,7 @@ export const listNightmareS = () => {
     })
 }*/
 //-----------------------------------------------------------------------------------
-import {BASE_URL} from "./config.js"
+/*import {BASE_URL} from "./config.js"
 export const apiList = (s, type) => {
     const url = BASE_URL + `s=${s}&type=${type}`;
     fetch(url)
@@ -31,5 +31,25 @@ export const apiList = (s, type) => {
     .then((results) => {
         const items = results.Search;
         console.log(items);
+    });
+}*/
+//-------------------------------------------------------------------------------
+import {BASE_URL} from "./config.js"
+export const apiList = (s, type) => {
+    const url = BASE_URL + `s=${s}&type=${type}`;
+    fetch(url)
+    .then((response) => response.json())
+    .then((results) => {
+        const items = results.Search;
+        viewItems(items);
+    });
+}
+const viewItems = (items) => {
+    items.map((item) => {
+        console.group(item.Title);
+        console.log(item.Year);
+        console.log(item.Type);
+        console.log(item.Poster);
+        console.groupEnd();
     });
 }
