@@ -11,12 +11,6 @@
 </head>
 <body>
 
-  <script type="module">
-    import {apiList} from "./js/modulo-api.js";
-    import {CONTENT_TYPE} from "./js/config.js";
-    apiList("nightmare", CONTENT_TYPE.SERIES);
-  </script>
-
   <!--NAVBAR-->
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
@@ -31,13 +25,13 @@
             <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Film</a>
+            <a class="nav-link smoothScroll" href="#film">Film</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Serie TV</a>
+            <a class="nav-link smoothScroll" href="#serietv">Serie TV</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Giochi</a>
+            <a class="nav-link smoothScroll" href="#giochi">Giochi</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -91,34 +85,34 @@
   <!--RIGA 1-->
   
   <!------------------------------------------------------------------------------------------------------>
-    <div class="row justify-content-around">
+    <div class="row justify-content-around" id="film">
       <h1 class="h1">Film</h1>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="img/poster.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="film-titolo-1">Card title</h5>
-            <p class="film-anno-1">Anno</p>
+          <img src="" class="card-img-top" alt="..." id="img1">
+          <div class="card-body" id="card1">
+            <h5 class="card-title" id="titolo1">Card Title</h5>
+            <p class="card-text"  id="anno1">Anno</p>
             <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="img/poster.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="film-titolo-2">Card title</h5>
-            <p class="film-anno-2">Anno</p>
+          <img src="" class="card-img-top" alt="..." id="img2">
+          <div class="card-body" id="card2">
+            <h5 class="card-title" id="titolo2">Card title</h5>
+            <p class="card-text" id="anno2">Anno</p>
             <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="img/poster.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="film-titolo-3">Card title</h5>
-            <p class="film-anno-3">Anno</p>
+          <img src="img/poster.jpg" class="card-img-top" alt="..." id="img3">
+          <div class="card-body" id="card3">
+            <h5 class="card-title" id="titolo3">Card title</h5>
+            <p class="card-text" id="anno3">Anno</p>
             <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
@@ -127,34 +121,70 @@
 
     <!--RIGA 2-->
 
-    <div class="row justify-content-around">
+    <div class="row justify-content-around" id="serietv">
       <h1 class="h1">Serie TV</h1>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="img/poster.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Anno</p>
+          <img src="" class="card-img-top" alt="..." id="img4">
+          <div class="card-body" id="card4">
+            <h5 class="card-title" id="titolo4">Card title</h5>
+            <p class="card-text" id="anno4">Anno</p>
             <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="img/poster.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Anno</p>
+          <img src="" class="card-img-top" alt="..." id="img5">
+          <div class="card-body" id="card5">
+            <h5 class="card-title" id="titolo5">Card title</h5>
+            <p class="card-text" id="anno5">Anno</p>
             <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="img/poster.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Anno</p>
+          <img src="" class="card-img-top" alt="..." id="img6">
+          <div class="card-body" id="card6">
+            <h5 class="card-title" id="titolo6">Card title</h5>
+            <p class="card-text" id="anno6">Anno</p>
+            <a href="#" class="btn btn-primary d-flex justify-content-center" id="bottone">Visita</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--RIGA 3-->
+
+    <div class="row justify-content-around" id="giochi">
+      <h1 class="h1">Giochi</h1>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="..." id="img7">
+          <div class="card-body" id="card7">
+            <h5 class="card-title" id="titolo7">Card title</h5>
+            <p class="card-text" id="anno7">Anno</p>
+            <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="..." id="img8">
+          <div class="card-body" id="card8">
+            <h5 class="card-title" id="titolo8">Card title</h5>
+            <p class="card-text" id="anno8">Anno</p>
+            <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="..." id="img9">
+          <div class="card-body" id="card9">
+            <h5 class="card-title" id="titolo9">Card title</h5>
+            <p class="card-text" id="anno9">Anno</p>
             <a href="#" class="btn btn-primary d-flex justify-content-center" id="bottone">Visita</a>
           </div>
         </div>
@@ -169,5 +199,23 @@
             <a class="text-dark">MovieZone</a>
         </div>
     </footer>
+    
+    <script type="module">
+      import {Film1, Film2, Film3, Serie1, Serie2, Serie3, Gioco1, Gioco2, Gioco3} from "./js/modulo-api.js";
+      import {CONTENT_TYPE} from "./js/config.js";
+
+      Film1("Fast & Furious", CONTENT_TYPE.MOVIE);
+      Film2("Jurassic Park", CONTENT_TYPE.MOVIE);
+      Film3("Spaceballs", CONTENT_TYPE.MOVIE);
+  
+      Serie1("A Team", CONTENT_TYPE.SERIES);
+      Serie2("Miami Vice", CONTENT_TYPE.SERIES);
+      Serie3("Prison Break", CONTENT_TYPE.SERIES);
+
+      Gioco1("Battlefield 4", CONTENT_TYPE.GAME);
+      Gioco2("Uncharted 4", CONTENT_TYPE.GAME);
+      Gioco3("FIFA 14", CONTENT_TYPE.GAME);
+      
+    </script>
 </body>
 </html>

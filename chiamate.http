@@ -9,7 +9,9 @@ GET https://www.omdbapi.com/?apikey=23887cb6&s=nightmare&page=1 HTTP/1.1
 GET https://www.omdbapi.com/?apikey=23887cb6&s=terminator&type=game HTTP/1.1
 
 ###
+GET https://www.omdbapi.com/?apikey=23887cb6&s=battlefield&type=game
 
+###
 GET https://www.omdbapi.com/?apikey=23887cb6&
 
 ###
