@@ -78,7 +78,7 @@ const viewItems = (items) => {
 };
 const createHTMLmovie = (movie) => {
 
-    const para = document.createElement("p");
+    const para = document.createElement("h1");
 
     const node = document.createTextNode(movie.Title);
 
