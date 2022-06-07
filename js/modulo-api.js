@@ -103,14 +103,14 @@ const viewItems = (items) => {
 
     items.map((item) => {
 
-        const element = document.getElementById("movies");
+        const element = document.getElementsByClassName("card-body");
         
         element.appendChild(createHTMLmovie(item));
     });
 };
 const createHTMLmovie = (movie) => {
 
-    const para = document.createElement("h1");
+    const para = document.createElement("h5");
 
     const node = document.createTextNode(movie.Title);
 
