@@ -55,6 +55,7 @@ const viewItems = (items) => {
     });
 }*/
 //----------------------------------------------------------------------------------------------
+/*
 import {BASE_URL} from "./config.js"
 export const apiList = (s, type) => {
     const url = BASE_URL + `s=${s}&type=${type}`;
@@ -66,6 +67,37 @@ export const apiList = (s, type) => {
     });
 }
 
+
+const viewItems = (items) => {
+
+    items.map((item) => {
+
+        const element = document.getElementById("movies");
+        
+        element.appendChild(createHTMLmovie(item));
+    });
+};
+const createHTMLmovie = (movie) => {
+
+    const para = document.createElement("h1");
+
+    const node = document.createTextNode(movie.Title);
+
+    para.appendChild(node);
+    return para;
+}
+*/
+//---------------------------------------------------------------------------------------------
+import {BASE_URL} from "./config.js"
+export const apiList = (s, type) => {
+    const url = BASE_URL + `s=${s}&type=${type}`;
+    fetch(url)
+    .then((response) => response.json())
+    .then((results) => {
+        const items = results.Search;
+        viewItems(items);
+    });
+}
 
 const viewItems = (items) => {
 

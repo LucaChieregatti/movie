@@ -10,6 +10,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
+  <script type="module">
+    import {apiList} from "./js/modulo-api.js";
+    import {CONTENT_TYPE} from "./js/config.js";
+  </script>
+
+  <!--NAVBAR-->
+
   <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">MovieZone</a>
@@ -37,6 +45,9 @@
       </div>
     </div>
   </nav>
+
+  <!--CAROSELLO-->
+
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -75,15 +86,18 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+  <!--RIGA 1-->
+
     <div class="row justify-content-around">
       <h1 class="h1">FILM</h1>
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
           <img src="img/poster.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+            <h5 class="film-titolo-1">Card title</h5>
+            <p class="film-anno-1">Anno</p>
+            <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
@@ -91,9 +105,9 @@
         <div class="card" style="width: 18rem;">
           <img src="img/poster.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+            <h5 class="film-titolo-2">Card title</h5>
+            <p class="film-anno-2">Anno</p>
+            <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
@@ -101,14 +115,16 @@
         <div class="card" style="width: 18rem;">
           <img src="img/poster.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+            <h5 class="film-titolo-3">Card title</h5>
+            <p class="film-anno-3">Anno</p>
+            <a href="#" class="btn btn-primary d-flex justify-content-center">Visita</a>
           </div>
         </div>
       </div>
     </div>
-    <br>
+
+    <!--RIGA 2-->
+
     <div class="row justify-content-around">
       <h1 class="h1">SERIE TV</h1>
       <div class="col-md-4 d-flex justify-content-center">
@@ -142,6 +158,9 @@
         </div>
       </div>
     </div>
+
+    <!--FOOTER-->
+
       <footer class="footer text-center text-lg-start">
         <div class="text-center p-3">
             © 2022 Copyright:
