@@ -161,15 +161,13 @@ const replaceMovieContent = (movie) => {
 
 //---2---
 
-export const Film2 = (t, type) => {
+export const Film2 = async (t, type) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            const item = result;
-            
-            viewItems2(item); 
-        });
+    const response = await fetch(url);
+    const result = await response.json();
+    const item = result;
+    viewItems2(item); 
+
 };
 
 const viewItems2 = (item) =>{
@@ -236,16 +234,13 @@ const replaceMovieContent3 = (movie) => {
 //----------------------------------------------Serie TV-------------------------------------------------
 
 //---1---
-
-export const Serie1 = (t, type) => {
+export const Serie1 = async (t, type) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            const item = result;
-            
-            viewItems4(item); 
-        });
+    const response = await fetch(url);
+    const result = await response.json();
+    const item = result;
+    viewItems4(item); 
+
 };
 
 const viewItems4 = (item) =>{
@@ -311,15 +306,13 @@ const replaceSerieContent5 = (series) => {
 
 //---3---
 
-export const Serie3 = (t, type) => {
+export const Serie3 = async (t, type) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            const item = result;
-            
-            viewItems6(item); 
-        });
+    const response = await fetch(url);
+    const result = await response.json();
+    const item = result;
+    viewItems6(item); 
+
 };
 
 const viewItems6 = (item) =>{
