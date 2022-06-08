@@ -1,7 +1,8 @@
 
 body {
-  background-image: linear-gradient(black,rgb(138, 138, 138));
- }
+  background: linear-gradient(black,rgb(138, 138, 138));
+  overflow-x: hidden;
+}
  .navbar{
   background-color: rgb(177, 151, 3);
  }
@@ -30,5 +31,6 @@ body {
 }
 .footer{
   background-color: rgb(177, 151, 3);
+ 
 }
 
