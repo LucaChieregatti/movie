@@ -316,7 +316,7 @@ const replaceSerieContent6 = (series) => {
 //---1---
 
 export const Gioco1 = (t, type) => {
-    const url = BASE_URL + `s=${t}&type=${type}`;
+    const url = BASE_URL + `i=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
@@ -353,7 +353,7 @@ const replaceSerieContent7 = (game) => {
 //---2---
 
 export const Gioco2 = (t, type) => {
-    const url = BASE_URL + `s=${t}&type=${type}`;
+    const url = BASE_URL + `i=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
@@ -390,7 +390,7 @@ const replaceSerieContent8 = (game) => {
 //---3---
 
 export const Gioco3 = (t, type) => {
-    const url = BASE_URL + `s=${t}&type=${type}`;
+    const url = BASE_URL + `i=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
