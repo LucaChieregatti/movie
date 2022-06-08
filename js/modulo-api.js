@@ -89,6 +89,41 @@ const createHTMLmovie = (movie) => {
 */
 //---------------------------------------------------------------------------------------------
 import {BASE_URL} from "./config.js"
+export const Film = (t, type) => {
+    const url = BASE_URL + `t=${t}&type=${type}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            const item = result;
+            
+            viewItemss(item); 
+        });
+};
+
+const viewItemss = (item) =>{
+   replaceMovieContentt(item);
+}
+
+const replaceMovieContentt = (movie) => {
+
+    const element = document.getElementById("card1");
+    const titolo_vuoto = document.getElementById("titolo1");
+    const anno_vuoto = document.getElementById("anno1");
+    const img = document.getElementById("img1");
+
+    const titolo = document.createElement("h5");
+    const node = document.createTextNode(movie.Title);
+    titolo.appendChild(node);
+
+    const anno = document.createElement("p");
+    const node2 = document.createTextNode(movie.Year);
+    anno.appendChild(node2);
+
+    element.replaceChild(titolo, titolo_vuoto);
+    element.replaceChild(anno, anno_vuoto);
+    img.src = `${movie.Poster}`;
+}
+//------------------------------------
 export const Film1 = (t, type) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
     fetch(url)
