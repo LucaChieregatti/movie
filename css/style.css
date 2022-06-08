@@ -1,4 +1,3 @@
-
 body {
   background: linear-gradient(black,rgb(138, 138, 138));
   overflow-x: hidden;
@@ -28,7 +27,6 @@ body {
   cursor: pointer;
 }
 .card:hover{
-
   box-shadow: 5px 6px 6px 2px #e9ecef;
   transform: scale(1.1);
 }
@@ -42,6 +40,5 @@ body {
 }
 .footer{
   background-color: rgb(177, 151, 3);
- 
 }
 
