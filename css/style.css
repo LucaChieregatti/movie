@@ -23,8 +23,19 @@ body {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.card{
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.card:hover{
+
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.1);
+}
 .card-body{
   background-color: rgb(177, 151, 3);
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 .btn{
   background-color: rgb(80, 80, 80);
