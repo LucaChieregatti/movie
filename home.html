@@ -32,9 +32,6 @@
             <a class="nav-link smoothScroll" href="#giochi">Giochi</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" >
-        </form>
       </div>
     </div>
   </nav>
@@ -51,24 +48,12 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="img/2.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Titolo</h5>
-          <p>Questa è una prova 1</p>
-        </div>
       </div>
       <div class="carousel-item">
         <img src="img/1.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Titolo 2</h5>
-          <p>Questa è una prova 2</p>
-        </div>
       </div>
       <div class="carousel-item">
         <img src="img/3.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Titolo 3</h5>
-          <p>Questa è una prova 3</p>
-        </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -81,14 +66,14 @@
     </button>
   </div>
 
-  <!--RIGA 1-->
+  <!--CARD 1-->
   <!------------------------------------------------------------------------------------------------------>
 
     <div class="row justify-content-center" id="film">
       <hr style="height:2px;border-width:0;color:gray;background-color:rgb(177, 151, 3)">
       <h1 class="h1">Film</h1>
-      <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+      <div class="col-md-4 d-flex justify-content-center" >
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           <img src="" class="card-img-top" alt="..." id="img1">
           <div class="card-body" id="card1">
             <h5 class="card-title" id="titolo1">Card Title</h5>
@@ -96,8 +81,31 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+
+  <!--MODAL 1-->
+  <!------------------------------------------------------------------------------------------------------>
+
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+            <div class="modal-body" id="modal1">
+              <h5 class="modal-title" id="titolo1">Modal title</h5>
+              <img src="" class="" alt="..." id="img1">
+              <p class=""  id="anno1">Anno</p>
+              <p class=""  id="plot1">Plot</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!--CARD 2-->
+  <!------------------------------------------------------------------------------------------------------>
+
+      <div class="col-md-4 d-flex justify-content-center" >
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
           <img src="" class="card-img-top" alt="..." id="img2">
           <div class="card-body" id="card2">
             <h5 class="card-title" id="titolo2">Card title</h5>
@@ -105,8 +113,31 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+
+  <!--MODAL 2-->
+  <!------------------------------------------------------------------------------------------------------>
+
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-body" id="modal2">
+          <h5 class="modal-title" id="titolo2">Modal title</h5>
+          <img src="" class="" alt="..." id="img2">
+          <p class=""  id="anno2">Anno</p>
+          <p class=""  id="plot2">Plot</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--CARD 3-->
+  <!------------------------------------------------------------------------------------------------------>
+
+      <div class="col-md-4 d-flex justify-content-center" >
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
           <img src="" class="card-img-top" alt="..." id="img3">
           <div class="card-body" id="card3">
             <h5 class="card-title" id="titolo3">Card title</h5>
@@ -116,14 +147,33 @@
       </div>
     </div>
 
-    <!--RIGA 2-->
+  <!--MODAL 3-->
+  <!------------------------------------------------------------------------------------------------------>
+
+  <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-body" id="modal3">
+          <h5 class="modal-title" id="titolo3">Modal title</h5>
+          <img src="" class="" alt="..." id="img3">
+          <p class=""  id="anno3">Anno</p>
+          <p class=""  id="plot3">Plot</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--CARD 4-->
   <!------------------------------------------------------------------------------------------------------>
 
     <div class="row justify-content-center" id="serietv">
       <hr style="height:2px;border-width:0;color:gray;background-color:rgb(177, 151, 3)">
       <h1 class="h1">Serie TV</h1>
       <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
           <img src="" class="card-img-top" alt="..." id="img4">
           <div class="card-body" id="card4">
             <h5 class="card-title" id="titolo4">Card title</h5>
@@ -131,8 +181,31 @@
           </div>
         </div>
       </div>
+
+  <!--MODAL 4-->
+  <!------------------------------------------------------------------------------------------------------>
+
+  <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-body" id="modal4">
+          <h5 class="modal-title" id="titolo4">Modal title</h5>
+          <img src="" class="" alt="..." id="img4">
+          <p class=""  id="anno4">Anno</p>
+          <p class=""  id="plot4">Plot</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--CARD 5-->
+  <!------------------------------------------------------------------------------------------------------>
+
       <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
           <img src="" class="card-img-top" alt="..." id="img5">
           <div class="card-body" id="card5">
             <h5 class="card-title" id="titolo5">Card title</h5>
@@ -140,8 +213,31 @@
           </div>
         </div>
       </div>
+
+  <!--MODAL 5-->
+  <!------------------------------------------------------------------------------------------------------>
+
+      <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+            <div class="modal-body" id="modal5">
+              <h5 class="modal-title" id="titolo5">Modal title</h5>
+              <img src="" class="" alt="..." id="img5">
+              <p class=""  id="anno5">Anno</p>
+              <p class=""  id="plot5">Plot</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!--CARD 6-->
+  <!------------------------------------------------------------------------------------------------------>
+
       <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
           <img src="" class="card-img-top" alt="..." id="img6">
           <div class="card-body" id="card6">
             <h5 class="card-title" id="titolo6">Card title</h5>
@@ -151,14 +247,33 @@
       </div>
     </div>
 
-    <!--RIGA 3-->
+  <!--MODAL 6-->
+  <!------------------------------------------------------------------------------------------------------>
+
+      <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+            <div class="modal-body" id="modal6">
+              <h5 class="modal-title" id="titolo6">Modal title</h5>
+              <img src="" class="" alt="..." id="img6">
+              <p class=""  id="anno6">Anno</p>
+              <p class=""  id="plot6">Plot</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  <!--CARD 7-->
   <!------------------------------------------------------------------------------------------------------>
 
     <div class="row justify-content-center" id="giochi">
       <hr style="height:2px;border-width:0;color:gray;background-color:rgb(177, 151, 3)">
       <h1 class="h1">Giochi</h1>
       <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop7">
           <img src="" class="card-img-top" alt="..." id="img7">
           <div class="card-body" id="card7">
             <h5 class="card-title" id="titolo7">Card title</h5>
@@ -166,8 +281,31 @@
           </div>
         </div>
       </div>
+
+  <!--MODAL 7-->
+  <!------------------------------------------------------------------------------------------------------>
+
+  <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-body" id="modal7">
+          <h5 class="modal-title" id="titolo7">Modal title</h5>
+          <img src="" class="" alt="..." id="img7">
+          <p class=""  id="anno7">Anno</p>
+          <p class=""  id="plot7">Plot</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--CARD 8-->
+  <!------------------------------------------------------------------------------------------------------>
+
       <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop8">
           <img src="" class="card-img-top" alt="..." id="img8">
           <div class="card-body" id="card8">
             <h5 class="card-title" id="titolo8">Card title</h5>
@@ -175,8 +313,31 @@
           </div>
         </div>
       </div>
+
+  <!--MODAL 8-->
+  <!------------------------------------------------------------------------------------------------------>
+
+  <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-body" id="modal8">
+          <h5 class="modal-title" id="titolo8">Modal title</h5>
+          <img src="" class="" alt="..." id="img8">
+          <p class=""  id="anno8">Anno</p>
+          <p class=""  id="plot8">Plot</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--CARD 9-->
+  <!------------------------------------------------------------------------------------------------------>
+
       <div class="col-md-4 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop9">
           <img src="" class="card-img-top" alt="..." id="img9">
           <div class="card-body" id="card9">
             <h5 class="card-title" id="titolo9">Card title</h5>
@@ -186,7 +347,26 @@
       </div>
     </div>
 
-    <!--FOOTER-->
+  <!--MODAL 9-->
+  <!------------------------------------------------------------------------------------------------------>
+
+  <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-body" id="modal9">
+          <h5 class="modal-title" id="titolo9">Modal title</h5>
+          <img src="" class="" alt="..." id="img9">
+          <p class=""  id="anno9">Anno</p>
+          <p class=""  id="plot9">Plot</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--FOOTER-->
   <!------------------------------------------------------------------------------------------------------>
 
       <footer class="footer text-center text-lg-start ">
@@ -197,20 +377,68 @@
     </footer>
     
     <script type="module">
-      import {Film1, Film2, Film3, Serie1, Serie2, Serie3, Gioco1, Gioco2, Gioco3} from "./js/modulo-api.js";
+      //import {Film1, Film2, Film3, Serie1, Serie2, Serie3, Gioco1, Gioco2, Gioco3} from "./js/modulo-api.js";
+      import {Films} from "./js/modulo-api.js";
+      import {ModalFilm} from "./js/modulo-api.js";
+
+      import {Serie} from "./js/modulo-api.js";
+      import {ModalSerie} from "./js/modulo-api.js";
+
+      import {Giochi} from "./js/modulo-api.js";
+      import {ModalGiochi} from "./js/modulo-api.js";
+
       import {CONTENT_TYPE} from "./js/config.js";
 
-      Film1("Fast & Furious", CONTENT_TYPE.MOVIE);
-      Film2("Jurassic Park", CONTENT_TYPE.MOVIE);
-      Film3("Spaceballs", CONTENT_TYPE.MOVIE);
-  
-      Serie1("A Team", CONTENT_TYPE.SERIES);
-      Serie2("Miami Vice", CONTENT_TYPE.SERIES);
-      Serie3("Prison Break", CONTENT_TYPE.SERIES);
+      const film_pool = ["Fast & Furious", "Jurassic Park", "Spaceballs"]
+      const serie_pool = ["A Team", "Miami Vice", "Prison Break"]
+      const giochi_pool = ["tt1625541", "tt1800763", "tt3124414"]
 
-      Gioco1("tt1625541", CONTENT_TYPE.GAME);
-      Gioco2("tt1800763", CONTENT_TYPE.GAME);
-      Gioco3("tt3124414", CONTENT_TYPE.GAME);
+      let type = CONTENT_TYPE.MOVIE;
+      let i = 1;
+
+      film_pool.map((title) =>{
+        Films(title, type, i);
+        i++;
+      })
+
+      type = CONTENT_TYPE.SERIES;
+      
+      serie_pool.map((title) =>{
+        Serie(title, type, i);
+        i++;
+      })
+
+      type = CONTENT_TYPE.GAME;
+      
+      giochi_pool.map((title) =>{
+        Giochi(title, type, i);
+        i++;
+      })
+
+      //-------------Modal-----------------
+
+      type = CONTENT_TYPE.MOVIE;
+      i = 1;
+
+      film_pool.map((title) =>{
+        ModalFilm(title, type, i);
+        i++;
+      })
+
+      type = CONTENT_TYPE.SERIES;
+      
+      serie_pool.map((title) =>{
+        ModalSerie(title, type, i);
+        i++;
+      })
+
+      type = CONTENT_TYPE.GAME;
+      
+      giochi_pool.map((title) =>{
+        ModalGiochi(title, type, i);
+        i++;
+      })
+
       
     </script>
 </body>

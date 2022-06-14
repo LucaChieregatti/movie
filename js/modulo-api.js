@@ -89,62 +89,31 @@ const createHTMLmovie = (movie) => {
 */
 //---------------------------------------------------------------------------------------------
 import {BASE_URL} from "./config.js"
-export const Film = (t, type) => {
+export const Films = (t, type, indice) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
             const item = result;
             
-            viewItemss(item); 
+            viewItems(item, indice); 
         });
 };
 
-const viewItemss = (item) =>{
-   replaceMovieContentt(item);
+const viewItems = (item, indice) =>{
+    const card_ID = `card${indice}`;
+    const title_ID = `titolo${indice}`;
+    const anno_ID = `anno${indice}`;
+    const img_ID = `img${indice}`;
+   replaceMovieContent(item, card_ID, title_ID, anno_ID, img_ID);
 }
 
-const replaceMovieContentt = (movie) => {
+const replaceMovieContent = (movie, card_ID, title_ID, anno_ID, img_ID) => {
 
-    const element = document.getElementById("card1");
-    const titolo_vuoto = document.getElementById("titolo1");
-    const anno_vuoto = document.getElementById("anno1");
-    const img = document.getElementById("img1");
-
-    const titolo = document.createElement("h5");
-    const node = document.createTextNode(movie.Title);
-    titolo.appendChild(node);
-
-    const anno = document.createElement("p");
-    const node2 = document.createTextNode(movie.Year);
-    anno.appendChild(node2);
-
-    element.replaceChild(titolo, titolo_vuoto);
-    element.replaceChild(anno, anno_vuoto);
-    img.src = `${movie.Poster}`;
-}
-//------------------------------------
-export const Film1 = (t, type) => {
-    const url = BASE_URL + `t=${t}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            const item = result;
-            
-            viewItems(item); 
-        });
-};
-
-const viewItems = (item) =>{
-   replaceMovieContent(item);
-}
-
-const replaceMovieContent = (movie) => {
-
-    const element = document.getElementById("card1");
-    const titolo_vuoto = document.getElementById("titolo1");
-    const anno_vuoto = document.getElementById("anno1");
-    const img = document.getElementById("img1");
+    const element = document.getElementById(card_ID);
+    const titolo_vuoto = document.getElementById(title_ID);
+    const anno_vuoto = document.getElementById(anno_ID);
+    const img = document.getElementById(img_ID);
 
     const titolo = document.createElement("h5");
     const node = document.createTextNode(movie.Title);
@@ -159,64 +128,35 @@ const replaceMovieContent = (movie) => {
     img.src = `${movie.Poster}`;
 }
 
-//---2---
+//-------------------------------------------------Modal Film-------------------------------------------------
 
-export const Film2 = async (t, type) => {
-    const url = BASE_URL + `t=${t}&type=${type}`;
-    const response = await fetch(url);
-    const result = await response.json();
-    const item = result;
-    viewItems2(item); 
-
-};
-
-const viewItems2 = (item) =>{
-   replaceMovieContent2(item);
-}
-
-const replaceMovieContent2 = (movie) => {
-
-    const element = document.getElementById("card2");
-    const titolo_vuoto = document.getElementById("titolo2");
-    const anno_vuoto = document.getElementById("anno2");
-    const img = document.getElementById("img2");
-
-    const titolo = document.createElement("h5");
-    const node = document.createTextNode(movie.Title);
-    titolo.appendChild(node);
-
-    const anno = document.createElement("p");
-    const node2 = document.createTextNode(movie.Year);
-    anno.appendChild(node2);
-
-    element.replaceChild(titolo, titolo_vuoto);
-    element.replaceChild(anno, anno_vuoto);
-    img.src = `${movie.Poster}`;
-}
-
-//---3---
-
-export const Film3 = (t, type) => {
+export const ModalFilm = (t, type, indice) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
             const item = result;
             
-            viewItems3(item); 
+            viewItems4(item, indice); 
         });
 };
 
-const viewItems3 = (item) =>{
-   replaceMovieContent3(item);
+const viewItems4 = (item, indice) =>{
+    const modal_ID = `modal${indice}`;
+    const title_ID = `titolo${indice}`;
+    const anno_ID = `anno${indice}`;
+    const plot_ID = `plot${indice}`;
+    const img_ID = `img${indice}`;
+   replaceMovieContent4(item, modal_ID, title_ID, anno_ID, plot_ID, img_ID);
 }
 
-const replaceMovieContent3 = (movie) => {
+const replaceMovieContent4 = (movie, modal_ID, title_ID, anno_ID, plot_ID, img_ID) => {
 
-    const element = document.getElementById("card3");
-    const titolo_vuoto = document.getElementById("titolo3");
-    const anno_vuoto = document.getElementById("anno3");
-    const img = document.getElementById("img3");
+    const element = document.getElementById(modal_ID);
+    const titolo_vuoto = document.getElementById(title_ID);
+    const anno_vuoto = document.getElementById(anno_ID);
+    const plot_vuoto = document.getElementById(plot_ID);
+    const img = document.getElementById(img_ID);
 
     const titolo = document.createElement("h5");
     const node = document.createTextNode(movie.Title);
@@ -226,33 +166,40 @@ const replaceMovieContent3 = (movie) => {
     const node2 = document.createTextNode(movie.Year);
     anno.appendChild(node2);
 
+    const plot = document.createElement("p");
+    const node3 = document.createTextNode(movie.Plot);
+    plot.appendChild(node3);
+
     element.replaceChild(titolo, titolo_vuoto);
     element.replaceChild(anno, anno_vuoto);
+    element.replaceChild(plot, plot_vuoto);
     img.src = `${movie.Poster}`;
 }
 
 //----------------------------------------------Serie TV-------------------------------------------------
 
-//---1---
-export const Serie1 = async (t, type) => {
+export const Serie = async (t, type, indice) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
     const response = await fetch(url);
     const result = await response.json();
     const item = result;
-    viewItems4(item); 
+    viewItems2(item, indice); 
 
 };
-
-const viewItems4 = (item) =>{
-   replaceSerieContent4(item);
+const viewItems2 = (item, indice) =>{
+    const card_ID = `card${indice}`;
+    const title_ID = `titolo${indice}`;
+    const anno_ID = `anno${indice}`;
+    const img_ID = `img${indice}`;
+   replaceMovieContent2(item, card_ID, title_ID, anno_ID, img_ID);
 }
 
-const replaceSerieContent4 = (series) => {
+const replaceMovieContent2 = (series, card_ID, title_ID, anno_ID, img_ID) => {
 
-    const element = document.getElementById("card4");
-    const titolo_vuoto = document.getElementById("titolo4");
-    const anno_vuoto = document.getElementById("anno4");
-    const img = document.getElementById("img4");
+    const element = document.getElementById(card_ID);
+    const titolo_vuoto = document.getElementById(title_ID);
+    const anno_vuoto = document.getElementById(anno_ID);
+    const img = document.getElementById(img_ID);
 
     const titolo = document.createElement("h5");
     const node = document.createTextNode(series.Title);
@@ -267,29 +214,35 @@ const replaceSerieContent4 = (series) => {
     img.src = `${series.Poster}`;
 }
 
-//---2---
+//-------------------------------------------------Modal SerieTV-------------------------------------------------
 
-export const Serie2 = (t, type) => {
+export const ModalSerie = (t, type, indice) => {
     const url = BASE_URL + `t=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
             const item = result;
             
-            viewItems5(item); 
+            viewItems5(item, indice); 
         });
 };
 
-const viewItems5 = (item) =>{
-   replaceSerieContent5(item);
+const viewItems5 = (item, indice) =>{
+    const modal_ID = `modal${indice}`;
+    const title_ID = `titolo${indice}`;
+    const anno_ID = `anno${indice}`;
+    const plot_ID = `plot${indice}`;
+    const img_ID = `img${indice}`;
+   replaceMovieContent5(item, modal_ID, title_ID, anno_ID, plot_ID, img_ID);
 }
 
-const replaceSerieContent5 = (series) => {
+const replaceMovieContent5 = (series, modal_ID, title_ID, anno_ID, plot_ID, img_ID) => {
 
-    const element = document.getElementById("card5");
-    const titolo_vuoto = document.getElementById("titolo5");
-    const anno_vuoto = document.getElementById("anno5");
-    const img = document.getElementById("img5");
+    const element = document.getElementById(modal_ID);
+    const titolo_vuoto = document.getElementById(title_ID);
+    const anno_vuoto = document.getElementById(anno_ID);
+    const plot_vuoto = document.getElementById(plot_ID);
+    const img = document.getElementById(img_ID);
 
     const titolo = document.createElement("h5");
     const node = document.createTextNode(series.Title);
@@ -299,71 +252,40 @@ const replaceSerieContent5 = (series) => {
     const node2 = document.createTextNode(series.Year);
     anno.appendChild(node2);
 
-    element.replaceChild(titolo, titolo_vuoto);
-    element.replaceChild(anno, anno_vuoto);
-    img.src = `${series.Poster}`;
-}
-
-//---3---
-
-export const Serie3 = async (t, type) => {
-    const url = BASE_URL + `t=${t}&type=${type}`;
-    const response = await fetch(url);
-    const result = await response.json();
-    const item = result;
-    viewItems6(item); 
-
-};
-
-const viewItems6 = (item) =>{
-   replaceSerieContent6(item);
-}
-
-const replaceSerieContent6 = (series) => {
-
-    const element = document.getElementById("card6");
-    const titolo_vuoto = document.getElementById("titolo6");
-    const anno_vuoto = document.getElementById("anno6");
-    const img = document.getElementById("img6");
-
-    const titolo = document.createElement("h5");
-    const node = document.createTextNode(series.Title);
-    titolo.appendChild(node);
-
-    const anno = document.createElement("p");
-    const node2 = document.createTextNode(series.Year);
-    anno.appendChild(node2);
+    const plot = document.createElement("p");
+    const node3 = document.createTextNode(series.Plot);
+    plot.appendChild(node3);
 
     element.replaceChild(titolo, titolo_vuoto);
     element.replaceChild(anno, anno_vuoto);
+    element.replaceChild(plot, plot_vuoto);
     img.src = `${series.Poster}`;
 }
 
 //----------------------------------------------Giochi-------------------------------------------------
 
-//---1---
-
-export const Gioco1 = (t, type) => {
+export const Giochi = async (t, type, indice) => {
     const url = BASE_URL + `i=${t}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            const item = result;
-            
-            viewItems7(item); 
-        });
+    const response = await fetch(url);
+    const result = await response.json();
+    const item = result;
+    viewItems3(item, indice); 
 };
 
-const viewItems7 = (item) =>{
-   replaceSerieContent7(item);
+const viewItems3 = (item, indice) =>{
+    const card_ID = `card${indice}`;
+    const title_ID = `titolo${indice}`;
+    const anno_ID = `anno${indice}`;
+    const img_ID = `img${indice}`;
+   replaceMovieContent3(item, card_ID, title_ID, anno_ID, img_ID);
 }
 
-const replaceSerieContent7 = (game) => {
+const replaceMovieContent3 = (game, card_ID, title_ID, anno_ID, img_ID) => {
 
-    const element = document.getElementById("card7");
-    const titolo_vuoto = document.getElementById("titolo7");
-    const anno_vuoto = document.getElementById("anno7");
-    const img = document.getElementById("img7");
+    const element = document.getElementById(card_ID);
+    const titolo_vuoto = document.getElementById(title_ID);
+    const anno_vuoto = document.getElementById(anno_ID);
+    const img = document.getElementById(img_ID);
 
     const titolo = document.createElement("h5");
     const node = document.createTextNode(game.Title);
@@ -378,29 +300,35 @@ const replaceSerieContent7 = (game) => {
     img.src = `${game.Poster}`;
 }
 
-//---2---
+//-------------------------------------------------Modal Giochi-------------------------------------------------
 
-export const Gioco2 = (t, type) => {
+export const ModalGiochi = (t, type, indice) => {
     const url = BASE_URL + `i=${t}&type=${type}`;
     fetch(url)
         .then(response => response.json())
         .then(result => {
             const item = result;
             
-            viewItems8(item); 
+            viewItems6(item, indice); 
         });
 };
 
-const viewItems8 = (item) =>{
-   replaceSerieContent8(item);
+const viewItems6 = (item, indice) =>{
+    const modal_ID = `modal${indice}`;
+    const title_ID = `titolo${indice}`;
+    const anno_ID = `anno${indice}`;
+    const plot_ID = `plot${indice}`;
+    const img_ID = `img${indice}`;
+   replaceMovieContent6(item, modal_ID, title_ID, anno_ID, plot_ID, img_ID);
 }
 
-const replaceSerieContent8 = (game) => {
+const replaceMovieContent6 = (game, modal_ID, title_ID, anno_ID, plot_ID, img_ID) => {
 
-    const element = document.getElementById("card8");
-    const titolo_vuoto = document.getElementById("titolo8");
-    const anno_vuoto = document.getElementById("anno8");
-    const img = document.getElementById("img8");
+    const element = document.getElementById(modal_ID);
+    const titolo_vuoto = document.getElementById(title_ID);
+    const anno_vuoto = document.getElementById(anno_ID);
+    const plot_vuoto = document.getElementById(plot_ID);
+    const img = document.getElementById(img_ID);
 
     const titolo = document.createElement("h5");
     const node = document.createTextNode(game.Title);
@@ -410,44 +338,12 @@ const replaceSerieContent8 = (game) => {
     const node2 = document.createTextNode(game.Year);
     anno.appendChild(node2);
 
-    element.replaceChild(titolo, titolo_vuoto);
-    element.replaceChild(anno, anno_vuoto);
-    img.src = `${game.Poster}`;
-}
-
-//---3---
-
-export const Gioco3 = (t, type) => {
-    const url = BASE_URL + `i=${t}&type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            const item = result;
-            
-            viewItems9(item); 
-        });
-};
-
-const viewItems9 = (item) =>{
-   replaceSerieContent9(item);
-}
-
-const replaceSerieContent9 = (game) => {
-
-    const element = document.getElementById("card9");
-    const titolo_vuoto = document.getElementById("titolo9");
-    const anno_vuoto = document.getElementById("anno9");
-    const img = document.getElementById("img9");
-
-    const titolo = document.createElement("h5");
-    const node = document.createTextNode(game.Title);
-    titolo.appendChild(node);
-
-    const anno = document.createElement("p");
-    const node2 = document.createTextNode(game.Year);
-    anno.appendChild(node2);
+    const plot = document.createElement("p");
+    const node3 = document.createTextNode(game.Plot);
+    plot.appendChild(node3);
 
     element.replaceChild(titolo, titolo_vuoto);
     element.replaceChild(anno, anno_vuoto);
+    element.replaceChild(plot, plot_vuoto);
     img.src = `${game.Poster}`;
 }
