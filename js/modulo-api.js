@@ -174,7 +174,6 @@ const replaceMovieContent4 = (movie, modal_ID, title_ID, anno_ID, plot_ID, img_I
     element.replaceChild(anno, anno_vuoto);
     element.replaceChild(plot, plot_vuoto);
     img.src = `${movie.Poster}`;
-    console.log(img);
 }
 
 //----------------------------------------------Serie TV-------------------------------------------------
