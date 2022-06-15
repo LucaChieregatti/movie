@@ -35,8 +35,11 @@ body {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.btn{
-  background-color: rgb(80, 80, 80);
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 300px;
 }
 .footer{
   background-color: rgb(177, 151, 3);
