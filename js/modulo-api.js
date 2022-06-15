@@ -143,10 +143,10 @@ export const ModalFilm = (t, type, indice) => {
 
 const viewItems4 = (item, indice) =>{
     const modal_ID = `modal${indice}`;
-    const title_ID = `titolo${indice}`;
-    const anno_ID = `anno${indice}`;
+    const title_ID = `titoloo${indice}`;
+    const anno_ID = `annoo${indice}`;
     const plot_ID = `plot${indice}`;
-    const img_ID = `img${indice}`;
+    const img_ID = `imgg${indice}`;
    replaceMovieContent4(item, modal_ID, title_ID, anno_ID, plot_ID, img_ID);
 }
 
@@ -174,6 +174,7 @@ const replaceMovieContent4 = (movie, modal_ID, title_ID, anno_ID, plot_ID, img_I
     element.replaceChild(anno, anno_vuoto);
     element.replaceChild(plot, plot_vuoto);
     img.src = `${movie.Poster}`;
+    console.log(img);
 }
 
 //----------------------------------------------Serie TV-------------------------------------------------
@@ -229,10 +230,10 @@ export const ModalSerie = (t, type, indice) => {
 
 const viewItems5 = (item, indice) =>{
     const modal_ID = `modal${indice}`;
-    const title_ID = `titolo${indice}`;
-    const anno_ID = `anno${indice}`;
+    const title_ID = `titoloo${indice}`;
+    const anno_ID = `annoo${indice}`;
     const plot_ID = `plot${indice}`;
-    const img_ID = `img${indice}`;
+    const img_ID = `imgg${indice}`;
    replaceMovieContent5(item, modal_ID, title_ID, anno_ID, plot_ID, img_ID);
 }
 
@@ -315,10 +316,10 @@ export const ModalGiochi = (t, type, indice) => {
 
 const viewItems6 = (item, indice) =>{
     const modal_ID = `modal${indice}`;
-    const title_ID = `titolo${indice}`;
-    const anno_ID = `anno${indice}`;
+    const title_ID = `titoloo${indice}`;
+    const anno_ID = `annoo${indice}`;
     const plot_ID = `plot${indice}`;
-    const img_ID = `img${indice}`;
+    const img_ID = `imgg${indice}`;
    replaceMovieContent6(item, modal_ID, title_ID, anno_ID, plot_ID, img_ID);
 }
 
