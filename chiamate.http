@@ -1,4 +1,4 @@
-GET https://www.omdbapi.com/?apikey=23887cb6&s=nightmare HTTP/1.1
+GET https://www.omdbapi.com/?apikey=23887cb6&s=ATeam&type=series HTTP/1.1
 
 ###
 
